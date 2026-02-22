@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SISTEMAS OPERATIVOS</title>
+
+<style>
+body {
+    background-color: #f2f2f2;
+    font-family: Arial;
+}
+
+.contenedor {
+    width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 25px;
+    box-shadow: 0px 0px 15px gray;
+}
+
+h1 {
+    text-align: center;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="contenedor">
+<h1>Sistemas Operativos - Primer Parcial</h1>
+
+<h2 style="color:blue";>Linea del Tiempo de los S.O</h2>
+
+<img src="linea.jpeg" width="250">     <img src= "lineaa.jpeg" width="300">
+
+<h2 style="color:blue;"> Errores de los Sistemas Operativos</h2>
+<h3 style="color:purple;">Windows Vista (2007)</h3>
+<p>
+Probemas principales:
+<ul>
+<li>Requeria mucho hardware para su epoca.</li>
+<li>Funcionaba lento incluso en computadoras nuevas.</li>
+<li>Muchos programas y dispositivos no tenian drivers compatibles.</li>
+<li>El control de cuentas de ususario (UAC) mostraba alertas excesivas.</li>
+</ul>
+<h3 style="color:purple;">Windows 7 (2009)</h3>  
+<ul>                
+ Corrigio muchos problemas pero no fue perfecto
+<br>
+Problemas principales: 
+<li>Dependia mucho del hardware para buen rendimiento.</li>
+<li>Con el fin del soporte, se volvio inseguro</li>
+<li>No estaba preparado para tecnologias actuales.</li>
+</br>
+</ul>
+<h3 style="color:purple;"> Windows 8/8.1 (2012-2013)</h3>        
+Problemas principales:                                            
+<ul>                                                              
+<li>Eliminación del menú de inicio tradicional.</li>                     
+<li>Interfaz enfocada a pantallas táctiles.</li>                                                                                
+<li>Confusión entre modo "escritorio"" y modo "metro".</li> 
+</ul>                                                                         
+<h3 style="color:purple;"> Windows 10 (2015)</h3>                 
+Problemas principales:    
+<ul>                                                                                                      
+<li>Actualizaciones con errores inesperados.                       
+<li>Fallos tras parches grandes.</li>
+<li>Inestabilidad en algunos drivers.</li>
+<li>Actualizaciones Forzadas.</li>
+<li>Telemetría activada por defecto.</li>
+</ul>
+<h3 style="color:purple";> Windows 11 (2021-Actualidad)</h3>
+Principales errores:
+<ul>
+<li>Requisitos muy estrictos (TPM, CPU).</li>
+<li>PCs funcionales quedaron absoletas.</li>
+<li>Bugs de rendimiento en versiones iniciales.</li>
+</ul>
+<h3 style="color:purple";> MacOs </h3>
+Principales errores:
+<ul>
+<li>Eliminación de soporte a apps de 32 bits.</li>
+<li>Problemas de compatibilidad tras actualizaciones.</li>
+<li>Bugs iniciales en nuevas versiones.</li>
+<li>Dependencia total de hardware Apple.</li>
+<li>Dificil reparación.</li>
+</ul>
+<h3 style="color:purple";> OS </h3>
+Errores principales:
+<ul>
+<li>Drenaje de batería tras actualizaciones.</li>
+<li>Bugs en versiones iniciales.</li>
+<li>Sistema muy cerrado.</li>
+<li>Poca personalización.</li>
+<li>Restriccion de tiendas de Apps.</li>
+</ul>
+<h3 style="color:purple";> Android </h3>
+Errores principales:
+<ul>
+<li>Fragmentación extrema.</li>
+<li>Versiones antiguas sin soporte.</li>
+<li>Rendimiento variable.</li>
+<li>Mayor riesgo de malware.</li>
+</ul>
+<h3 style="color:purple";> Linux (2015-actualidad) </h3>
+Principales errores:
+<ul>
+<li>Drivers incompletos.</li>
+<li>Compatibilidad limitada con software comercial.</li>
+<li>Problemas con hardware nuevo.</li>
+<li>Dificil para usuarios nuevos.</li>
+<li>Muchas distribuciones confunden.</li>
+</ul>
+
+<h2 style="color:blue";> Procesos De Hilos </h2>
+<h3 style="color:purple";>Que es un hilo (Thread) </h3>
+<ul>
+<li>Es la unidad basica de ejecucion dentro de un proceso. Mientras que un proceso tradicional tiene solo un hilo de control (Marcado Por el program counter), los sistemas modernos permiten multiples hilos dentro de un mismo espacio de direcciones.</li>
+</ul>
+<h3 style="color:purple";> Razones Para Usar hilos</h3>
+<ul>
+<li>Muititarea: Permiten que una aplicacion realice varias actividades a la vez.</li>
+<li>Eficiencia y Ralidez: Crear y destruir un hilo es entre 10 y 100 veces mas rapido que hacerlo con un proceso completo ya que son mucho mas "ligeros".</li>
+<li>Recursos compartidos: A diferencia de los procesos, los hilos comparten el mismo espacio de direcciones, variables globales y archivos abiertos.</li>
+</ul>
+<h3 style="color:purple";> Diferencias en la estructura </h3>
+<ul>
+Los elementos propios de cada hilo y cuales se comparten del proceso padre:
+<li>Elementos propios de cada hilo: Contador de programa (PC), registros, Pila (Stack) y estado del hilo.</li>
+<li>Elementos compartidos (del proceso): Espacio de direcciones, variables globales, archivos abiertos y señales.</li>
+</ul>
+<h3 style="color:purple";>Riesgo del multihilo</h3>
+<ul>
+Debido a que todos los hilos pueden acceder a la misma memoria un hilo podria, por error, leer, escribir o borrar datos de otro hilo. No existe una proteccion estricta entre ellos, por lo que la eficiencia depende de una programacion cuidadosa.
+</ul>
+<h2 style="color:blue";>Planificacion de Procesos de la CPU</h2>
+<h3 style="color:purple";> El Rol de Planificador (Scheduler) </h3>
+<ul>
+El sistema operativo debe dividir el tiempo de la CPU de la manera mas eficiente posible entre todos los procesos que estan en la memoria principal. El objetivo es dar Uha sensacion de simultaneidad mediante la commutacion rapida entre tareas.
+</ul>
+<h3 style="color:purple";>Clasificacion de Politicas de Planificacion</h2>
+<ul>
+<li>No apropiativos: Una vez que un proceso toma la CPU, no la suelta hasta que termina su rafaga de ejecucion. No puede ser interrumpido por otros procesos.</li>
+<li>Apropiativos: El sistera operativo puede interrumpir un proceso en ejecucion para cederle el recurso a otro, ya sea por tiempo agotado o por una prioridad mayor</li>
+</ul>
+<h3 style="color:purple";> Argoritmos Principales </h3>
+<ul>
+<li>FIFO (First-In, First Out): Es una cola secuencial simple; el primero que llega es el primero que se atiende.</li>
+<li>SJF (Shortest Job first): Elige siempre el trabajo mas corto disponible en la cola para ejecutarlo primero, lo que reduce los tiempos de espera medios.</li>
+<li>Prioridades: Se asigna un valor numerico a cada proceso. Los de mayor prioridad se ejecutan antes que los de menor prioridad.</li>
+<li>Round Robin (Turno Circular): Es el mas comun en sistemas modernos. Usa un Quantum (intervalo de tiempo). Cada proceso usa la CPU durante ese tiempo y si no termina, vuelve al final de la cola para permitir que otros avancen.</li>
+
+<li>SRTF (Shortest Remaining Time first)
+Una version avanzada donde, si llega un proceso nuevo que tardo menos que lo que le queda al actual, se interrumpe el actual para atender al mas corto.</li>
+</ul>
+<h3 style="color:purple";>¿Como se mide la eficiencia?</h3>
+<ul>
+<li>Tiempo de espera : Cuanto tiempo paso el proceso en la cola de "listo".</li>
+<li>Tiempo de respuesta / Finalizacion (f): El tiempo total desde la creacion hasta que termina.</li>
+<li>Penalización: una formula (F/T) que indica la proporcion de espera respecto al uso de CPU. El objetivo siempre es minimizar la penalizacion media.</li>
+</ul>
+<h2 style="color:blue";>Procesos o Hilos</h2>
+<ul>
+Los Primeros Sistemas de computo permitian la ejecucion de un programa a la vez, las computadoras modernas de hoy en dia pueden ejecutar varios programas al mismo tiempo, por ejemplo: mientras ejecutan un programa, tambien pueden leer un disco, leer un dispositivo externo, abrir un navegador, mandar un archivo a la impresora, etc. Para lograr esto, se requiere mayor control y una mayor division de los diferentes programas, que dio por resultado el concepto de proceso.
+</ul>
+
+<strong> Definicion de Procesos </strong>
+<ul>
+Un proceso se define como un programa en ejecucion y es la unidad de procesamiento gestionada por el sistema operativo.
+
+Segun Carretero "EI SO mantiene por cada proceso una serie de estructuras de informacion para identificar las caracteristicas de este, asi como los recursos que tiene asignados. El sistema operativo mantiene una tabla de procesos con todos los bloques de controI de proceso (B.C.P). Por razones de eficiencia la tabla de procesos se construye normalmente como una estructura estatica, que tiene in determinado numero de BCP"
+
+Nota: El proceso no incluye informacion de entrada/salida (E/S) ya que esto esta reservado al sistema operativo.
+</ul>
+
+<h2 style="color:blue";>Modelos de procesos e identificadores de procesos</h2>
+<ul>
+Se entiende por modelos de procesos, una representación de los estados que puede tener un proceso, considerando los siguientes: nuevo, ejecución, en espera, listo y terminado.
+
+En estos modelos (Tanenbaum, 2003: 72-73), todo el software que se ejecuta en una computadora está organizado en procesos secuenciales; y cada uno de ellos posee una unidad central de proceso de forma virtual, que también es conocida como paralelismo virtual; es decir, el verdadero CPU cambia en forma continua de un proceso a otro, a esta conmutación se le llama multiprogramación, permitiendo aprovechar al máximo la memoria y finalizar con más tareas en menos tiempo. Cuando un proceso se está llevando a cabo y se bloquea esperando por la E/S, en la CPU se envía una instrucción para que se ejecute otro proceso (no de forma paralela; sino intercalada), ayudando a hacer más eficiente el procesamiento de programas, a esto se le llama concurrencia.
+<</ul>
+<ul>
+Entre los modelos de procesos tenemos, el de dos y el de cinco estados.
+</ul>
+<ul>
+Proceso es un programa en ejecucion, el cual debe proceder de manera secuencial. Un proceso ademas del codigo del programa, incluye la actividad actual, representada por el valor del contador de programa y el valor de los registros de la CPU. Generalmente tambien incluye el stack del proceso, que contiene datos temporales y una seccion de datos que contiene variables globales.
+</ul>
+<ul>
+Un programa es la entidad pasiva como un archivo en disco, mientras que un proceso es una cantidad activa. Aunque podria haber dos procesos asociados al mismo programa de todas maneras se consideran como dos secuencias de ejecucion distintas.
+</ul>
+
+<h2 style="color:purple";>Características de un Proceso</h2>
+<ul>
+<li>Las instrucciones de programa destinados a ser ejecutados por el mismo microprocesador.</li>
+<li>Su estado de ejecucion en un momento dado, los valores de los registros de la CPU para dicho programa.</li>
+<li>Su memoria de trabajo es la memoria que se ha reservado y son sus contenidos.</li>
+<li>Transmiten al sistema operativo su planificacion.
+
+<br>
+<ul>
+<p><u>Nota:</u></p> En el caso de sistemas operativos multhilos donde un proceso consta de uno o mas hilos, la memoria trabajo es compartida por todos los hilos y la informacion de planificacion. Cada hilo consta de instrucciones y estado de ejecucion.
+</ul>
+<br>
+<ul>
+Los Procesos son creados y destruidos por el SO, asi como tambien el SO, se debe hacer cargo de la comunicacion entre procesos, pero lo hace a peticion de otros procesos. El mecanismo por el cual un proceso crea otro proceso se denomina difurcacion (Fork), los nuevos procesos pueden ser independientes y no compartir el espacio de memoria con el proceso que los ha creado o ser creados en el mismo espacio de memoria.
+</ul>
+
+<ul>
+<br>
+En los SO multihilos es posible crear tanto hilos como procesos. La diferencia en que un proceso solamente puede crear hilos para si mismo y en que dichos hilos comparten toda la memoria reservada para procesos.
+</br>
+</ul>
+</div>
+</body>
+</html>
